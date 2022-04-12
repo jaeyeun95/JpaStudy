@@ -5,8 +5,8 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class BoardDTO {
 
 //    private

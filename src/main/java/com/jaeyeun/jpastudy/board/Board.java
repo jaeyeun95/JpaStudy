@@ -1,43 +1,47 @@
 package com.jaeyeun.jpastudy.board;
 
-import lombok.*;
+
+import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.time.LocalDateTime;
 
-//@Getter
-//@NoArgsConstructor(access = AccessLevel.PROTECTED)
-//@Entity
-//@ToString
-public class BoardEntity {
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Entity
+public class Board {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id; // PK
 
-    private String title;
+    private String title; // 제목
 
-    private String content;
+    private String content; // 내용
 
-    private String writer;
+    private String writer; // 작성자
 
-    private int hits;
+    private int hits; // 조회 수
 
-    private char deleteYn;
+    private char deleteYn; // 삭제 여부
 
     private LocalDateTime createdDate = LocalDateTime.now(); // 생성일
 
     private LocalDateTime modifiedDate; // 수정일
 
     @Builder
-    public BoardEntity(String title, String content, String writer, int hits, char deleteYn) {
+    public Board(String title, String content, String writer, int hits, char deleteYn) {
         this.title = title;
         this.content = content;
         this.writer = writer;
         this.hits = hits;
         this.deleteYn = deleteYn;
     }
+
 }
