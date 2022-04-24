@@ -65,6 +65,9 @@ public class BoardTest {
         // 2. 전체 게시글 리스트 조회
         List<Board> boards = boardRepository.findAll();
 
+        System.out.println("전체 게시글 수 : " + boardsCount);
+        System.out.println("게시글 전체 리스트 : " + boards.toString());
+
     }
 
     @Test
