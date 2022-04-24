@@ -17,24 +17,6 @@ public class BoardTest {
     @Test
     void save() {
 
-//        // 게시글 등록
-//        BoardEntity board = BoardEntity.builder()
-//                .title("게시판테스트제목")
-//                .content("게시판테스트내용")
-//                .writer("test")
-//                .hits(0)
-//                .deleteYn('N')
-//                .build();
-//
-//        System.out.println("board : " + board.toString());
-//
-//        boardRepository.save(board);
-//
-//        // 1번 게시글 정보 조회
-//        Optional<BoardEntity> entity = boardRepository.findById(1L);
-//        Assertions.assertThat(entity.get().getTitle()).isEqualTo("게시판테스트제목");
-//        Assertions.assertThat(entity.get().getContent()).isEqualTo("게시판테스트내용");
-
         // 1. 게시글 파라미터 생성
         Board params = Board.builder()
                 .title("1번 게시글 제목")
